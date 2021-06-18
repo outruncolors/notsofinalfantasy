@@ -1,5 +1,13 @@
-import { Alert, Card, Menu, Layout } from "antd";
+import { Card, Menu, Layout } from "antd";
+import {
+  About,
+  Contribute,
+  EnemyGlossary,
+  HowToPlay,
+  JobSystem,
+} from "./pages";
 import { Page } from "./Page";
+import { Link, Route } from "react-router-dom";
 import "./App.less";
 import logo from "./logo.png";
 
@@ -23,27 +31,32 @@ function App() {
       <Layout.Content>
         <Page>
           <Menu mode="horizontal" theme="light">
-            <Menu.Item key="home">About</Menu.Item>
-            <Menu.Item key="how-to-play">How to Play</Menu.Item>
-            <Menu.Item key="jobs">Job System</Menu.Item>
-            <Menu.Item key="enemy-glossary">Enemy Glossary</Menu.Item>
-            <Menu.Item key="contribute">Contribute</Menu.Item>
+            <Menu.Item key="home">
+              <Link to="/">About</Link>
+            </Menu.Item>
+            <Menu.Item key="how-to-play">
+              <Link to="/how-to-play">How to Play</Link>
+            </Menu.Item>
+            <Menu.Item key="jobs">
+              <Link to="/job-system">Job System</Link>
+            </Menu.Item>
+            <Menu.Item key="enemy-glossary">
+              <Link to="/enemy-glossary">Enemy Glossary</Link>
+            </Menu.Item>
+            <Menu.Item key="contribute">
+              <Link to="/contribute">Contribute</Link>
+            </Menu.Item>
           </Menu>
-          <Alert
-            type="info"
-            message="Paying Tokens to Contributors"
-            description={
-              <>
-                I am currently looking for talented Rec Room artists to make
-                everything prettier! I'm offering to provide tokens (and credit,
-                of course!) based on the work done. Visit the Contribute page
-                for more info!
-              </>
-            }
-            style={{ margin: "2rem" }}
-            showIcon={true}
-            closable={true}
+
+          <Route path="/" exact={true} component={About} />
+          <Route path="/contribute" exact={true} component={Contribute} />
+          <Route
+            path="/enemy-glossary"
+            exact={true}
+            component={EnemyGlossary}
           />
+          <Route path="/how-to-play" exact={true} component={HowToPlay} />
+          <Route path="/job-system" exact={true} component={JobSystem} />
         </Page>
       </Layout.Content>
     </Layout>

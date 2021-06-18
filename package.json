@@ -1,5 +1,10 @@
 {
   "name": "not-so-final-fantasy",
+  "author": {
+    "name": "Connor Bryan",
+    "email": "itsoutruncolors@gmail.com",
+    "url": "https://notsofinalfantasy.com"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {

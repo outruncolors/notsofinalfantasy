@@ -6,6 +6,7 @@ import {
   EnemyGlossary,
   HowToPlay,
   JobSystem,
+  Map,
 } from "./pages";
 import { Page } from "./Page";
 import { Link, Route } from "react-router-dom";
@@ -38,6 +39,9 @@ function App() {
             <Menu.Item key="how-to-play">
               <Link to="/how-to-play">How to Play</Link>
             </Menu.Item>
+            <Menu.Item key="map">
+              <Link to="/map">World Map</Link>
+            </Menu.Item>
             <Menu.Item key="jobs">
               <Link to="/job-system">Job System</Link>
             </Menu.Item>
@@ -62,6 +66,7 @@ function App() {
           />
           <Route path="/how-to-play" exact={true} component={HowToPlay} />
           <Route path="/job-system" exact={true} component={JobSystem} />
+          <Route path="/map" exact={true} component={Map} />
         </Page>
       </Layout.Content>
     </Layout>

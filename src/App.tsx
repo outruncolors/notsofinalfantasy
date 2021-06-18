@@ -1,6 +1,7 @@
 import { Card, Menu, Layout } from "antd";
 import {
   About,
+  Circuits,
   Contribute,
   EnemyGlossary,
   HowToPlay,
@@ -43,12 +44,16 @@ function App() {
             <Menu.Item key="enemy-glossary">
               <Link to="/enemy-glossary">Enemy Glossary</Link>
             </Menu.Item>
+            <Menu.Item key="circuits">
+              <Link to="/circuits">Circuits</Link>
+            </Menu.Item>
             <Menu.Item key="contribute">
               <Link to="/contribute">Contribute</Link>
             </Menu.Item>
           </Menu>
 
           <Route path="/" exact={true} component={About} />
+          <Route path="/circuits" exact={true} component={Circuits} />
           <Route path="/contribute" exact={true} component={Contribute} />
           <Route
             path="/enemy-glossary"

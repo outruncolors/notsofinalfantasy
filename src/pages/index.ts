@@ -5,3 +5,4 @@ export * from "./EnemyGlossary";
 export * from "./HowToPlay";
 export * from "./JobSystem";
 export * from "./Map";
+export * from "./SpecialThanks";

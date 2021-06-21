@@ -36,7 +36,11 @@ function App() {
           hoverable={true}
           bodyStyle={{ display: "none" }}
         />
-        <Menu mode="inline" style={{ minHeight: "50vh", textAlign: "right" }}>
+        <Menu
+          mode="inline"
+          style={{ minHeight: "50vh", textAlign: "right" }}
+          selectedKeys={[]}
+        >
           <Menu.Item key="home">
             <Link to="/">About</Link>
           </Menu.Item>
@@ -61,36 +65,36 @@ function App() {
           <Menu.Item key="special-thanks">
             <Link to="/special-thanks">Special Thanks</Link>
           </Menu.Item>
-          <Menu.Item key="creator">
-            <a
-              href="https://rec.net/user/outruncolors"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center" }}
-            >
+          <a
+            href="https://rec.net/user/outruncolors"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <Menu.Item key="creator">
               <FaUserAlt style={{ marginRight: 6 }} /> @outruncolors
-            </a>
-          </Menu.Item>
-          <Menu.Item key="room">
-            <a
-              href="https://rec.net/room/NotSoFinalFantasy"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center" }}
-            >
+            </Menu.Item>
+          </a>
+          <a
+            href="https://rec.net/room/NotSoFinalFantasy"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <Menu.Item key="room">
               <RiHome2Fill style={{ marginRight: 6 }} /> ^NotSoFinalFantasy
-            </a>
-          </Menu.Item>
-          <Menu.Item key="github">
-            <a
-              href="https://github.com/outruncolors/notsofinalfantasy"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center" }}
-            >
+            </Menu.Item>
+          </a>
+          <a
+            href="https://github.com/outruncolors/notsofinalfantasy"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <Menu.Item key="github">
               <AiFillGithub style={{ marginRight: 6 }} /> GitHub
-            </a>
-          </Menu.Item>
+            </Menu.Item>
+          </a>
         </Menu>
       </Layout.Sider>
       <Layout.Content>

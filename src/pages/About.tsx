@@ -1,8 +1,8 @@
-import { Alert, PageHeader } from "antd";
+import { Alert, Divider, PageHeader, Space, Typography } from "antd";
 
 export function About() {
   return (
-    <>
+    <Space direction="vertical">
       <Alert
         type="info"
         message="Paying Tokens to Contributors"
@@ -18,7 +18,21 @@ export function About() {
         showIcon={true}
         closable={true}
       />
-      <PageHeader title="A Turn-Based Adventure in Rec Room" />
-    </>
+      <Divider orientation="left">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Typography.Title level={1} style={{ margin: 0 }}>
+            Not So Final Fantasy
+          </Typography.Title>
+
+          <PageHeader title="A Turn-Based Adventure in Rec Room" />
+        </div>
+      </Divider>
+    </Space>
   );
 }
